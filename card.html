@@ -5,7 +5,7 @@
 const url = new URL(location.href);
 const id = url.searchParams.get('id');
 
-fetch("https://jmkezyouxdklvnfmdkva.supabase.co/rest/v1/rest/v1/students?nfc_id=eq" + id, {
+fetch("https://jmkezyouxdklvnfmdkva.supabase.co/rest/v1/students?nfc_id=eq." + id, {
   headers: {
     "apikey": "sb_publishable_1f5tj59TbMTgs4V8jKbekg_cgp0nuHm",
     "Authorization": "Bearer sb_publishable_1f5tj59TbMTgs4V8jKbekg_cgp0nuHm"
