@@ -1,0 +1,20 @@
+<h1 id="name">Loading...</h1>
+<p id="balance"></p>
+
+<script>
+const url = new URL(location.href);
+const id = url.searchParams.get('id');
+
+fetch("https://jmkezyouxdklvnfmdkva.supabase.co/rest/v1/rest/v1/students?nfc_id=eq." + id, {
+  headers: {
+    "apikey": "sb_publishable_1f5tj59TbMTgs4V8jKbekg_cgp0nuHm",
+    "Authorization": "Bearer sb_publishable_1f5tj59TbMTgs4V8jKbekg_cgp0nuHm"
+  }
+})
+.then(res => res.json())
+.then(data => {
+  const s = data[0];
+  document.getElementById("name").textContent = s.name;
+  document.getElementById("balance").textContent = s.balance + "đ";
+});
+</script>
